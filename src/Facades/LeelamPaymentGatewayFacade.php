@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Facade;
 
 class LeelamPaymentGatewayFacade extends Facade
 {
-
     protected static function getFacadeAccessor()
     {
         return 'LeelamPaymentGateway';

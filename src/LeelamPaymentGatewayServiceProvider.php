@@ -24,7 +24,6 @@ class LeelamPaymentGatewayServiceProvider extends ServiceProvider {
 		);
 		$gateway = Config::get('leelamPaymentGatewayConfig.gateway');
 		$this->app->bind('LeelamPaymentGatewayFacade', '\Leelam\PaymentGateway\LeelamPaymentGateway');
-
 		$this->app->bind('\Leelam\PaymentGateway\Gateways\PaymentGatewayInterface', '\Leelam\PaymentGateway\Gateways\\' . $gateway . 'Gateway');
 
 
