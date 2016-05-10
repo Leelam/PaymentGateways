@@ -19,14 +19,14 @@ class PayUMoneyGateway implements PaymentGatewayInterface {
 
     function __construct()
     {
-        $this->merchantKey = Config::get('leelampaymentgateway.payumoney.merchantKey');
-        $this->salt = Config::get('leelampaymentgateway.payumoney.salt');
-        $this->testMode = Config::get('leelampaymentgateway.testMode');
+        $this->merchantKey = leelamPaymentGatewayConfig('PayUMoney.merchantKey');
+        $this->salt = leelamPaymentGatewayConfig('PayUMoney.salt');
+        $this->testMode = leelamPaymentGatewayConfig('testMode');
 
         $this->parameters['key'] = $this->merchantKey;
         $this->parameters['txnid'] = $this->generateTransactionID();
-        $this->parameters['surl'] = url(Config::get('leelampaymentgateway.payumoney.successUrl'));
-        $this->parameters['furl'] = url(Config::get('leelampaymentgateway.payumoney.failureUrl'));
+        $this->parameters['surl'] = url(leelamPaymentGatewayConfig('PayUMoney.successUrl'));
+        $this->parameters['furl'] = url(leelamPaymentGatewayConfig('PayUMoney.cancelUrl'));
         $this->parameters['service_provider'] = 'payu_paisa';
     }
 
@@ -53,8 +53,8 @@ class PayUMoneyGateway implements PaymentGatewayInterface {
     public function send()
     {
 
-        Log::info('Indipay Payment Request Initiated: ');
-        return View::make('indipay::payumoney')->with('hash',$this->hash)
+        Log::info('PayUMoney Payment Request Initiated: ');
+        return View::make('leelamPaymentGatewayConfig::payumoney')->with('hash', $this->hash)
                              ->with('parameters',$this->parameters)
                              ->with('endPoint',$this->getEndPoint());
 

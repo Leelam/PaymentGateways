@@ -11,6 +11,7 @@ class CreateLeelamPaymentGateTable extends Migration
             $table->string('transaction_id',64);
             $table->text('responce_data');
             $table->string('status',16)->default(null);
+            $table->string('service_provider', 64);
 
             $table->timestamps();
             $table->softDeletes();

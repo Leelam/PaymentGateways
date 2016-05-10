@@ -7,7 +7,7 @@ class LeelamPaymentGateway extends Facade
 
     protected static function getFacadeAccessor()
     {
-        return 'leelampaymentgateway';
+        return 'LeelamPaymentGateway';
     }
 
 }
