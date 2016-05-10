@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class LeelamPaymentGateway extends Facade
+class LeelamPaymentGatewayFacade extends Facade
 {
 
     protected static function getFacadeAccessor()

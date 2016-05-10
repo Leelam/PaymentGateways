@@ -3,4 +3,4 @@ composer.phar
 composer.lock
 .DS_Store
 /.git
-.idea/workspace.xml
+/.idea
