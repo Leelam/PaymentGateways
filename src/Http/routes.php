@@ -1,4 +1,4 @@
 <?php
 
-Route::post('leelampaymentgateway', ['as' => 'response', 'uses' => 'Leelam\PaymentGateway\LeelamPaymentGatewayController@status']);
+Route::post('leelampaymentgateway', ['as' => 'response', 'uses' => '\Leelam\PaymentGateway\LeelamPaymentGatewayController@status']);
 

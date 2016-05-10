@@ -10,54 +10,56 @@ return [
     |   view    = File
     */
 
-    'gateway' => 'InstaMojo',                // Replace with the name of appropriate gateway
+    'gatewayResponsePath' => 'leelam/payments', // Beware of conflicts
 
-    'testMode'  => true,                   // True for Testing the Gateway [For production false]
+    'gateway' => 'PayUMoney',                // Replace with the name of appropriate gateway
 
-    'ccavenue' => [                         // CCAvenue Parameters
+    'testMode' => false,                   // True for Testing the Gateway [For production false]
+
+    'CCAvenue' => [                         // CCAvenue Parameters
         'merchantId'  => env('INDIPAY_MERCHANT_ID', ''),
         'accessCode'  => env('INDIPAY_ACCESS_CODE', ''),
         'workingKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'redirectUrl' => env('INDIPAY_REDIRECT_URL', 'indipay/response'),
-        'cancelUrl' => env('INDIPAY_CANCEL_URL', 'indipay/response'),
+        'redirectUrl' => env('INDIPAY_REDIRECT_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
+        'cancelUrl' => env('INDIPAY_CANCEL_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
 
         'currency' => env('INDIPAY_CURRENCY', 'INR'),
         'language' => env('INDIPAY_LANGUAGE', 'EN'),
     ],
 
-    'payumoney' => [                         // PayUMoney Parameters
+    'PayUMoney' => [                         // PayUMoney Parameters
         'merchantKey'  => env('INDIPAY_MERCHANT_KEY', ''),
         'salt'  => env('INDIPAY_SALT', ''),
         'workingKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'successUrl' => env('INDIPAY_SUCCESS_URL', 'indipay/response'),
-        'failureUrl' => env('INDIPAY_FAILURE_URL', 'indipay/response'),
+        'successUrl' => env('INDIPAY_SUCCESS_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
+        'failureUrl' => env('INDIPAY_FAILURE_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
     ],
 
-    'ebs' => [                         // EBS Parameters
+    'EBS' => [                         // EBS Parameters
         'account_id'  => env('INDIPAY_MERCHANT_ID', ''),
         'secretKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'return_url' => env('INDIPAY_SUCCESS_URL', 'indipay/response'),
+        'return_url' => env('INDIPAY_SUCCESS_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
     ],
 
-    'citrus' => [                         // Citrus Parameters
+    'Citrus' => [                         // Citrus Parameters
         'vanityUrl'  => env('INDIPAY_CITRUS_VANITY_URL', ''),
         'secretKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'returnUrl' => env('INDIPAY_SUCCESS_URL', 'indipay/response'),
-        'notifyUrl' => env('INDIPAY_SUCCESS_URL', 'indipay/response'),
+        'returnUrl' => env('INDIPAY_SUCCESS_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
+        'notifyUrl' => env('INDIPAY_SUCCESS_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
     ],
 
-    'instamojo' =>  [
+    'InstaMojo' => [
         'api_key' => env('INSTAMOJO_API_KEY',''),
         'auth_token' => env('INSTAMOJO_AUTH_TOKEN',''),
-        'redirectUrl' => env('INDIPAY_REDIRECT_URL', 'indipay/response'),
+        'redirectUrl' => env('INDIPAY_REDIRECT_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
     ],
     
     /*
@@ -67,7 +69,7 @@ return [
      * 
      * */
     'remove_csrf_check' => [
-        'leelampay/response'
+        leelamPaymentGatewayConfig('gatewayResponsePath')
     ],
 
 

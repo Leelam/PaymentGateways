@@ -79,7 +79,7 @@ class CitrusGateway implements PaymentGatewayInterface {
 
     /**
      * @param $parameters
-     * @throws IndipayParametersMissingException
+     * @throws LeelamPaymentGatewayParametersMissingException
      */
     public function checkParameters($parameters)
     {
@@ -91,7 +91,7 @@ class CitrusGateway implements PaymentGatewayInterface {
         ]);
 
         if ($validator->fails()) {
-            throw new IndipayParametersMissingException;
+            throw new LeelamPaymentGatewayParametersMissingException;
         }
 
     }

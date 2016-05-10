@@ -82,7 +82,7 @@ class PayUMoneyGateway implements PaymentGatewayInterface {
 
     /**
      * @param $parameters
-     * @throws IndipayParametersMissingException
+     * @throws LeelamPaymentGatewayParametersMissingException
      */
     public function checkParameters($parameters)
     {
@@ -92,15 +92,15 @@ class PayUMoneyGateway implements PaymentGatewayInterface {
             'surl' => 'required|url',
             'furl' => 'required|url',
             'firstname' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
+            // 'email' => 'required',
+            //'phone' => 'required',
             'productinfo' => 'required',
             'service_provider' => 'required',
             'amount' => 'required|numeric',
         ]);
 
         if ($validator->fails()) {
-            throw new IndipayParametersMissingException;
+            throw new LeelamPaymentGatewayParametersMissingException;
         }
 
     }

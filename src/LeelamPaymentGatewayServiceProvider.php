@@ -19,22 +19,28 @@ class LeelamPaymentGatewayServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-        $gateway = Config::get('leelampaymentgateway.gateway');
-        $this->app->bind('leelampaymentgateway', '\Leelam\PaymentGateway\LeelamPaymentGateway');
+		$this->mergeConfigFrom(
+			__DIR__ . '/config/leelam/payment-gateways.php', 'leelamPaymentGatewayConfig'
+		);
+		$gateway = Config::get('leelamPaymentGatewayConfig.gateway');
+		$this->app->bind('leelampaymentgateway', '\Leelam\PaymentGateway\LeelamPaymentGateway');
 
-        $this->app->bind('\Leelam\PaymentGateway\Gateways\PaymentGatewayInterface','\Leelam\PaymentGateway\Gateways\\'.$gateway.'Gateway');
+		$this->app->bind('\Leelam\PaymentGateway\Gateways\PaymentGatewayInterface', '\Leelam\PaymentGateway\Gateways\\' . $gateway . 'Gateway');
+
+
 	}
 
 
-    public function boot(){
-        $this->publishes([
-            __DIR__ . '/config/leelam/payment-gateways.php' => base_path('config/leelam/payment-gateways.php'),
-            __DIR__.'/views/middleware.blade.php' => base_path('app/Http/Middleware/VerifyCsrfMiddleware.php'),
-        ]);
+	public function boot()
+	{
+		$this->publishes([
+			__DIR__ . '/config/leelam/payment-gateways.php' => base_path('config/leelam/payment-gateways.php'),
+			__DIR__ . '/views/middleware.blade.php' => base_path('app/Http/Middleware/VerifyCsrfMiddleware.php'),
+		]);
 
-		$this->loadViewsFrom(__DIR__.'/views', 'leelampaymentgateway');
+		$this->loadViewsFrom(__DIR__ . '/views', 'leelamPaymentGatewayConfig');
 
-    }
+	}
 
 	/**
 	 * Get the services provided by the provider.
@@ -45,7 +51,7 @@ class LeelamPaymentGatewayServiceProvider extends ServiceProvider {
 	{
 		return [
 
-        ];
+		];
 	}
 
 }
