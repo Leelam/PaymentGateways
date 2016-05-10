@@ -8,7 +8,7 @@ use Leelam\PaymentGateway\Exceptions\LeelamPaymentGatewayException;
 
 class PayUMoneyGateway implements PaymentGatewayInterface {
 
-    protected $parameters = array();
+    public $parameters = array(); // 
     protected $testMode = false;
     protected $merchantKey = '';
     protected $salt = '';

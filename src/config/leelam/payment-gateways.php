@@ -10,8 +10,7 @@ return [
     |   view    = File
     */
 
-    'gatewayResponsePath' => 'leelam/payments', // Beware of conflicts
-
+    
     'gateway' => 'PayUMoney',                // Replace with the name of appropriate gateway
 
     'testMode' => false,                   // True for Testing the Gateway [For production false]
@@ -22,8 +21,8 @@ return [
         'workingKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'redirectUrl' => env('INDIPAY_REDIRECT_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
-        'cancelUrl' => env('INDIPAY_CANCEL_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
+        'redirectUrl' => env('INDIPAY_REDIRECT_URL', 'leelam/payments'),
+        'cancelUrl' => env('INDIPAY_CANCEL_URL', 'leelam/payments'),
 
         'currency' => env('INDIPAY_CURRENCY', 'INR'),
         'language' => env('INDIPAY_LANGUAGE', 'EN'),
@@ -35,8 +34,8 @@ return [
         'workingKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'successUrl' => env('INDIPAY_SUCCESS_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
-        'failureUrl' => env('INDIPAY_FAILURE_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
+        'successUrl' => env('INDIPAY_SUCCESS_URL', 'leelam/payments'),
+        'failureUrl' => env('INDIPAY_FAILURE_URL', 'leelam/payments'),
     ],
 
     'EBS' => [                         // EBS Parameters
@@ -44,7 +43,7 @@ return [
         'secretKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'return_url' => env('INDIPAY_SUCCESS_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
+        'return_url' => env('INDIPAY_SUCCESS_URL', 'leelam/payments'),
     ],
 
     'Citrus' => [                         // Citrus Parameters
@@ -52,14 +51,14 @@ return [
         'secretKey' => env('INDIPAY_WORKING_KEY', ''),
 
         // Should be route address for url() function
-        'returnUrl' => env('INDIPAY_SUCCESS_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
-        'notifyUrl' => env('INDIPAY_SUCCESS_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
+        'returnUrl' => env('INDIPAY_SUCCESS_URL', 'leelam/payments'),
+        'notifyUrl' => env('INDIPAY_SUCCESS_URL', 'leelam/payments'),
     ],
 
     'InstaMojo' => [
         'api_key' => env('INSTAMOJO_API_KEY',''),
         'auth_token' => env('INSTAMOJO_AUTH_TOKEN',''),
-        'redirectUrl' => env('INDIPAY_REDIRECT_URL', leelamPaymentGatewayConfig('gatewayResponsePath')),
+        'redirectUrl' => env('INDIPAY_REDIRECT_URL', 'leelam/payments'),
     ],
     
     /*
@@ -69,7 +68,7 @@ return [
      * 
      * */
     'remove_csrf_check' => [
-        leelamPaymentGatewayConfig('gatewayResponsePath')
+        'leelam/payments'
     ],
 
 

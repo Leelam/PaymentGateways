@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7eede345-9a9d-4a0e-8d15-31d8804f5a45" name="Default" comment="small fixes">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="7eede345-9a9d-4a0e-8d15-31d8804f5a45" name="Default" comment="Small fixes to PayUMoney">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Facades/LeelamPaymentGateway.php" afterPath="$PROJECT_DIR$/src/Facades/LeelamPaymentGateway.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gateways/PayUMoneyGateway.php" afterPath="$PROJECT_DIR$/src/Gateways/PayUMoneyGateway.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Http/helpers.php" afterPath="$PROJECT_DIR$/src/Http/helpers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/migrations/leelam_payment_gateway.php" afterPath="$PROJECT_DIR$/src/migrations/leelam_payment_gateway.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Http/LeelamPaymentGatewayController.php" afterPath="$PROJECT_DIR$/src/Http/LeelamPaymentGatewayController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Http/routes.php" afterPath="$PROJECT_DIR$/src/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/leelam/payment-gateways.php" afterPath="$PROJECT_DIR$/src/config/leelam/payment-gateways.php" />
     </list>
     <ignored path="leelampay-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +50,8 @@
       <file leaf-file-name="payment-gateways.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/leelam/payment-gateways.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="34" column="48" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="48" />
+            <state relative-caret-position="-78">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -80,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PayUMoneyGateway.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PayUMoneyGateway.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Gateways/PayUMoneyGateway.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-744">
-              <caret line="75" column="15" selection-start-line="75" selection-start-column="15" selection-end-line="75" selection-end-column="15" />
+            <state relative-caret-position="156">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -100,22 +99,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymentGatewayInterface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Gateways/PaymentGatewayInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LeelamPaymentGatewayController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Http/LeelamPaymentGatewayController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="494">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <element signature="e#46#74#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,11 +114,21 @@
       <file leaf-file-name="helpers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Http/helpers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="156">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
               <folding>
                 <element signature="e#7#34#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,7 +146,6 @@
         <option value="$PROJECT_DIR$/src/Facades/leelampaymentgate.php" />
         <option value="$PROJECT_DIR$/src/Gateways/PaymentGatewayInterface.php" />
         <option value="$PROJECT_DIR$/src/Indipay.php" />
-        <option value="$PROJECT_DIR$/src/Http/LeelamPaymentGatewayController.php" />
         <option value="$PROJECT_DIR$/src/Exceptions/LeelamPaymentGatewayParametersMissingException.php" />
         <option value="$PROJECT_DIR$/src/views/payumoney.blade.php" />
         <option value="$PROJECT_DIR$/src/migrations/x.php" />
@@ -157,14 +157,15 @@
         <option value="$PROJECT_DIR$/src/Gateways/EBSGateway.php" />
         <option value="$PROJECT_DIR$/src/Gateways/InstaMojoGateway.php" />
         <option value="$PROJECT_DIR$/src/LeelamPaymentGateway.php" />
-        <option value="$PROJECT_DIR$/src/Http/routes.php" />
-        <option value="$PROJECT_DIR$/src/config/leelam/payment-gateways.php" />
         <option value="$PROJECT_DIR$/src/LeelamPaymentGatewayServiceProvider.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Facades/LeelamPaymentGateway.php" />
         <option value="$PROJECT_DIR$/src/Http/helpers.php" />
         <option value="$PROJECT_DIR$/src/migrations/leelam_payment_gateway.php" />
+        <option value="$PROJECT_DIR$/src/Http/LeelamPaymentGatewayController.php" />
+        <option value="$PROJECT_DIR$/src/config/leelam/payment-gateways.php" />
         <option value="$PROJECT_DIR$/src/Gateways/PayUMoneyGateway.php" />
+        <option value="$PROJECT_DIR$/src/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -397,7 +398,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1462874183990</updated>
-      <workItem from="1462874185542" duration="14207000" />
+      <workItem from="1462874185542" duration="18456000" />
     </task>
     <task id="LOCAL-00001" summary="small fixes">
       <created>1462885763191</created>
@@ -413,11 +414,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462893675148</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Small fixes to PayUMoney">
+      <created>1462896805121</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1462896805121</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14207000" />
+    <option name="totallyTimeSpent" value="18456000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="864" extended-state="6" />
@@ -450,7 +458,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="small fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fixes" />
+    <MESSAGE value="Small fixes to PayUMoney" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small fixes to PayUMoney" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -546,22 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="69" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Http/LeelamPaymentGatewayController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Gateways/PaymentGatewayInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -578,29 +571,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/leelam/payment-gateways.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="34" column="48" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Http/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="e#7#34#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,10 +605,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/leelam/payment-gateways.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Http/LeelamPaymentGatewayController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Http/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding>
+            <element signature="e#7#34#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Gateways/PayUMoneyGateway.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-744">
-          <caret line="75" column="15" selection-start-line="75" selection-start-column="15" selection-end-line="75" selection-end-column="15" />
+        <state relative-caret-position="156">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
