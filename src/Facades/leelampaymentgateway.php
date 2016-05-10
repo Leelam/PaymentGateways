@@ -1,4 +1,4 @@
-<?php namespace Leelam\LeelamPaymentGateway\Facades;
+<?php namespace Leelam\PaymentGateway\Facades;
 
 use \Illuminate\Support\Facades\Facade;
 
