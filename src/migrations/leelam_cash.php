@@ -9,8 +9,8 @@ class CreateLeelamCashTable extends Migration
         Schema::create('leelam_cash', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->unsignedBigInteger('user_id')->nullable()->comment('payee id');
-
+            $table->unsignedInteger('user_id')->nullable()->comment('payee id');
+            $table->unsignedBigInteger('amount');
             $table->string('transaction_id', 64);
             $table->text('responce_data'); // FROM Server
             $table->string('status', 16)->default(1); // mean sent to proivder but did not recevice any responce
@@ -20,7 +20,7 @@ class CreateLeelamCashTable extends Migration
             $table->integer('cashable_id'); // Model id
             $table->string('cashable_type'); // Model namespace
 
-            $table->unsignedInteger('parent_id')->default(0)->nullable()->comment('cash id linked to parent_id,can be useful for th e slit amoount');
+            //$table->unsignedInteger('parent_id')->default(0)->nullable()->comment('cash id linked to parent_id,can be useful for th e slit amoount');
             $table->string('ip')->default(null)->nullable()->comment('payee or user ip address');
 
 
@@ -39,7 +39,7 @@ class CreateLeelamCashTable extends Migration
             $table->dropForeign ( 'comments_user_id_foreign' );
         });*/
 
-        Schema::drop('leelam_payment_gateway');
+        Schema::drop('leelam_cash');
     }
 
 }
