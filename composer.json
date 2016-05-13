@@ -1,5 +1,5 @@
 {
-    "name": "leelam/paymentgateways",
+    "name": "leelam/cash",
     "description": "The Laravel 5 Package for Indian Payment Gateways. Currently supported gateways: CCAvenue, PayUMoney, EBS, CitrusPay, InstaMojo",
     "license": "MIT",
     "keywords": [
@@ -11,7 +11,8 @@
         "CitrusPay",
         "InstaMojo",
         "payments",
-        "Payment Gateways"
+        "Payment Gateways",
+        "Cash"
     ],
     "authors": [
         {
