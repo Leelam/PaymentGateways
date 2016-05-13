@@ -6,4 +6,6 @@ interface PaymentGatewayInterface {
     public function response($request);
 
     public function transactionId();
+
+    public function serviceProvider();
 }

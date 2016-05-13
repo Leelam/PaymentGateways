@@ -150,8 +150,6 @@ class PayUMoneyGateway implements PaymentGatewayInterface {
         return strtolower(hash('sha512', $hash_string));
     }
 
-
-
     public function generateTransactionID()
     {
         return substr(hash('sha256', mt_rand() . microtime()), 0, 20);
@@ -164,4 +162,8 @@ class PayUMoneyGateway implements PaymentGatewayInterface {
     }
 
 
+    public function serviceProvider()
+    {
+        return $this->parameters['service_provider'];
+    }
 }

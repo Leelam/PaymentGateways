@@ -12,7 +12,7 @@ class CreateLeelamCashTable extends Migration
             $table->unsignedInteger('user_id')->nullable()->comment('payee id');
             $table->unsignedBigInteger('amount');
             $table->string('transaction_id', 64);
-            $table->text('responce_data'); // FROM Server
+            $table->text('response_data')->nullable(); // FROM Server
             $table->string('status', 16)->default(1); // mean sent to proivder but did not recevice any responce
             $table->string('service_provider', 64); // payment gateway provider
 
