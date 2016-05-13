@@ -21,9 +21,9 @@ class CashServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/config/cash-settings.php', 'leelamPaymentGatewayConfig'
+            __DIR__ . '/config/cash-settings.php', 'cashConfig'
         );
-        $gateway = Config::get('leelamPaymentGatewayConfig.gateway');
+        $gateway = Config::get('cashConfig.gateway');
         $this->app->bind('CashFacade', '\Leelam\PaymentGateway\Cash');
         $this->app->bind('\Leelam\PaymentGateway\Gateways\PaymentGatewayInterface', '\Leelam\PaymentGateway\Gateways\\' . $gateway . 'Gateway');
 
@@ -38,7 +38,7 @@ class CashServiceProvider extends ServiceProvider
             __DIR__ . '/views/middleware.blade.php' => base_path('app/Http/Middleware/VerifyCsrfMiddleware.php'),
         ]);
 
-        $this->loadViewsFrom(__DIR__ . '/views', 'leelamPaymentGatewayConfig');
+        $this->loadViewsFrom(__DIR__ . '/views', 'cashConfig');
 
 
         // Configuring with main route file

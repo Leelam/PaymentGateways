@@ -3,11 +3,10 @@
 namespace Leelam\PaymentGateway\Http;
 
 use Illuminate\Http\Request;
-use Leelam\Http\Controllers\LeelamBaseController;
-use Leelam\PaymentGateway\Facades\LeelamPaymentGatewayFacade;
-use Leelam\PaymentGateway\LeelamPaymentGateway;
+use Leelam\PaymentGateway\Facades\CashFacade;
+use Leelam\PaymentGateway\Cash;
 
-class LeelamPaymentGatewayController extends LeelamBaseController
+class CashController extends \Controller
 {
 
     public function makePayment(Request $request)
@@ -27,21 +26,21 @@ class LeelamPaymentGatewayController extends LeelamBaseController
             'productinfo' => "$input[institution_id] payment by $input[student_name] for $input[payment_type]"
         ];
 
-        $order = LeelamPaymentGatewayFacade::prepare($parameters);
+        $order = CashFacade::prepare($parameters);
         $transaction_id = $order->parameters['txnid'];
         $input['transaction_id'] = $transaction_id;
         $input['status'] = 'initiated';
         $input['response_data'] = null;
 
-        LeelamPaymentGateway::create(
+        Cash::create(
             $input
         );
 
-        return LeelamPaymentGatewayFacade::process($order);
+        return CashFacade::process($order);
     }
 
 
-    public function transactionResponse(Request $request)
+    public function cashResponse(Request $request)
     {
         $input = $request->all();
         return $input->status;
@@ -51,7 +50,7 @@ class LeelamPaymentGatewayController extends LeelamBaseController
         $input['status'] = 'initiated';
         $input['response_data'] = null;
 
-        LeelamPaymentGateway::update();
+        Cash::update();
 
         if ($input['status'] == 'failure') {
 

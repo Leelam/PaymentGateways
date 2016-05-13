@@ -4,8 +4,8 @@
  * Helper function
  * */
 
-function leelamPaymentGatewayConfig($key)
+function cashConfig($key)
 {
 
-    return Config::get('leelamPaymentGatewayConfig.' . $key);
+    return Config::get('cashConfig.' . $key);
 }
