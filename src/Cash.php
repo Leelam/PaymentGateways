@@ -2,9 +2,19 @@
 
 use Leelam\PaymentGateway\Gateways\PaymentGatewayInterface;
 
-class LeelamPaymentGateway extends \Eloquent{
+class Cash extends \Eloquent
+{
 
     protected $gateway;
+
+
+    /**
+     * @return mixed
+     */
+    public function cashable()
+    {
+        return $this->morphTo();
+    }
 
 
     /**
@@ -33,7 +43,8 @@ class LeelamPaymentGateway extends \Eloquent{
         $this->gateway = $gateway;
     }
 
-    public function purchase($parameters = array()){
+    public function purchase($parameters = array())
+    {
 
         return $this->gateway->request($parameters)->send();
 
@@ -53,7 +64,6 @@ class LeelamPaymentGateway extends \Eloquent{
     {
         return $order->send();
     }
-
 
 
 }

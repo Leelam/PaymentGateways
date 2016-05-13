@@ -2,11 +2,11 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class LeelamPaymentGatewayFacade extends Facade
+class CashFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'LeelamPaymentGatewayFacade';
+        return 'CashFacade';
     }
 
 }
