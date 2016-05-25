@@ -43,4 +43,14 @@ class CashTransaction extends Model
         return $this->morphTo();
     }
 
+    /**
+     *  The persion who has made the transaction
+     *
+     * @return mixed
+     */
+    public function user ()
+    {
+        return $this->hasOne ( User::class, 'id', 'user_id' );
+    }
+
 }

@@ -152,7 +152,7 @@ class PayUMoneyGateway implements PaymentGatewayInterface {
 
     public function generateTransactionID()
     {
-        return substr(hash('sha256', mt_rand() . microtime()), 0, 20);
+        return substr ( hash ( 'sha256', mt_rand () . microtime () ), 0, 10 );
     }
 
 
