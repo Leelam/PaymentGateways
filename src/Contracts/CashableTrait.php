@@ -12,6 +12,7 @@ trait CashableTrait
      */
     public function cashTransaction()
     {
-        return $this->morphMany(CashTransaction::class, 'cashable');
+        return $this->morphOne ( CashTransaction::class, 'cashable' );
+        //return $this->morphMany(CashTransaction::class, 'cashable');
     }
 }
